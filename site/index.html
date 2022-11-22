@@ -6,10 +6,40 @@
 	<title>Primera Pagina web</title>
 	
 	<style>
+
+		h3 {
+			font-size: 30px;
+		}
+		div {
+			margin-left: 30px;
+		}
+		hr {
+			margin-left: -21px;
+			margin-right: -10px;
+			margin-top: -2px;
+			background-color: black;
+			padding: 1px;
+		}
+		header { 
+			background-color: skyblue;
+			margin-top: -10px;
+			margin-left: -21px;
+			margin-right: -10px;
+			padding: 10px;
+
+		}
  		body {  
    			font-family: sans-serif;
- 	}
-	</style> <!--Para hacer cambios generales al documento-->
+   			margin-left: 20px;
+  	 	}
+   		p {
+   			width: 700px;
+   			padding: 20px;
+   			border: 2px solid black; 
+   			margin-left: 100px;
+  	 	} 
+
+	</style> <!--Para hacer cambios generales al documento, toda las caracteristicas de p son para practicar el Box model de CSS-->
 
 </head>
 <body>
@@ -33,9 +63,9 @@
 					<li>Div: Inserta texto en una linea exigiendo exclusividad de la misma, elemento tipo Flow.</li>
 					<li>Aside: Hace lo mismo que Div, mas sin embargo su utilidad es semantica, aqui se escribe algo que tenga que ver con el contenido de la pagina pero que no sea tan relevante como el contenido principal.</li>
 				</ul>
-				<span><b>
+				<div><b>
 					Mientras que la diferencia entre Span y Div es funcional, la diferencia entre Div y Aside es semantica, es decir, reemplazar uno por el otro no cambiaria el resultado final de la pagina, pero si haria el codigo menos legible para otro individuo y en ciertos casos, seria mas complicado de interpretar por la computadora.
-				</b></span>
+				</b></div>
 			</article>
 			<article>
 				<h3>CSS</h3>
@@ -55,7 +85,7 @@
 				<div>Es importante aclarar que Javascript es un lenguaje de secuencia de comandos de lado del usuario, es decir, se ejecutara en el navegador que intente correr la pagina; Esto permitiria prescindir de la velocidad de la red pero dependiento del poder de procesamiento del usuario, motivo por el que navegadores como Chrome consumen tanta Memoria Ram pero corren tan rapido.</div>
 			</article>
 			<article>
-				<h3>PHP</h3?>
+				<h3>PHP</h3>
 
 				<p>PHP, al igual que Javascript, se encarga de la funcionalidad de la pagina, sin embargo este corre del lado del servidor, el usuario ejecutaria una accion en la pagina web la cual enviaria informacion a un script PHP en el servidor el cual la procesaria, luego de ser procesada, esta se traduce a algo que el usuario pueda ver o con lo que pueda interactuar y se le envia al mismo. Esta es la forma mas segura de darle funcionalidad a una pagina web, ya que el Script no es accesible por el usuario, tambien ahorra los recursos del mismo ya que el codigo no se ejecuta en su equipo, mas sin embargo, depende de la estabilidad y velocidad de la red</p>
 				
@@ -63,7 +93,7 @@
 		</section>
 		<hr>
 		<footer>Esta es la parte inferior de la pagina, lo mas comun es que contenga informacion importante pero no muy util para el usuario comun, un ejemplo de esto seria el Copyright, los Terminos de Uso, etc
-			<div>Esta pagina es un prototipo que ira avanzando conforme aprenda cosas nuevas, aun faltan muchos elementos que conozco, mas sin embargo necesito mas tiempo para imaginar una situacion en la que utilizarlos</div>
+			<div style="margin-left: 0px;">Esta pagina es un prototipo que ira avanzando conforme aprenda cosas nuevas, aun faltan muchos elementos que conozco, mas sin embargo necesito mas tiempo para imaginar una situacion en la que utilizarlos</div>
 			<aside><b> <a href="https://coursera.pxf.io/c/397676/1213622/14726?subId1=ddhtml1&u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fhtml-css-javascript-for-web-developers" title="Ir a la pagina principal del curso" target="_blank">Este es el curso con el que estoy aprendiendo</a></b></aside> <!-- Target _blank hace que la pagina se abra en una nueva pestaña-->
 		</footer>
 </body>
