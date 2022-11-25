@@ -4,53 +4,78 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Adapta la visualizacion de la pagina al dispositivo-->
 	<title>Primera Pagina web</title>
+
+
+
+
+
+
+
+
+
+	<!--To do list
+
+	Maybe theres a way to fix footer and header without MARGIN
+	<hr> cant reach fully to the right without streching the page
+	Must add a menu to the left that allows to jump to every section in the page
+		-Must find a way to make a partition on the left
+		-Must asign and ID to every section
+		-Must introduce Links to these sections on the partion on the left
+	image doesnt work on coursera host site
+	Find out a way to make Light and Night mode switcheable Live
+
+	-->
+
+
+
+
+
+
+
+
+
+
 	
-	<style>
-		.darkBackground {
-			color: orange;
+	<style> /*completely fine*/
+
+ 		body { 
+ 			background-color: black;
+ 			color: whitesmoke;
+   			font-family: sans-serif;
+   			margin: 0px;
+  	 	}
+		header {  
+			background-color: dimgrey;
+			margin-top: -10px;
+			padding: 10px;
 		}
-		footer{
-			margin-left: -20px;
-			margin-right: -10px;
-			margin-top: -9px;
-			margin-bottom: -8px;
+		.DarkOrangeText {
+			color: darkorange;
+		}
+		section { 
+			margin-left: 20px;
+		}
+		article p { 
+   			width: 700px;
+   			padding: 10px;
+   			border: 2px solid dimgrey; 
+   			margin-left: 100px;
+  	 	} 
+		h3 {
+			font-size: 25px;
+		}
+		hr { 
+			margin-top: -2px; /*To aligh it with Header*/
+			background-color: white;
+			padding: 2px;
+		}
+  	 	footer{ 
+			margin-top: -9px; /*To align it with hr*/
 			padding: 20px;
 			background-image: url(img/spaceNC.jpg); 
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
-		h3 {
-			font-size: 25px;
-		}
-		article div {
-			margin-left: 30px;
-		}
-		hr {
-			margin-top: -2px;
-			margin-left: -21px;
-			margin-right: -10px;
-			background-color: black;
-			padding: 2px;
-		}
-		header { 
-			background-color: skyblue;
-			margin-top: -10px;
-			margin-left: -21px;
-			margin-right: -10px;
-			padding: 10px;
-
-		}
- 		body {  /* Meddling with Body margin is wrong as fuck, I HAVE to fix this */
-   			font-family: sans-serif;
-   			margin-left: 20px;
-   			margin-right: 10px;
-  	 	}
-   		article p {
-   			width: 700px;
-   			padding: 10px;
-   			border: 2px solid black; 
-   			margin-left: 100px;
-  	 	} 
 
 	</style> <!--Para hacer cambios generales al documento, toda las caracteristicas son para practicar el Box model de CSS-->
 
@@ -59,7 +84,7 @@
 
 	<header>
 		<h1 style="font-size: 35px;">Mi primera pagina web</h1>
-		<span style="font-size: 20px; font-weight: bold;">Esta es la parte superior de una pagina web, generalmente contiene el nombre y logo de la empresa y puede contener tambien un menu de navegacion</span>
+		<div style="font-size: 20px; font-weight: bold;">Esta es la parte superior de una pagina web, generalmente contiene el nombre y logo de la empresa y puede contener tambien un menu de navegacion</div>
 	</header>
 	<hr>
 		<section>
@@ -99,14 +124,14 @@
 			<article>
 				<h3>PHP</h3>
 
-				<p>PHP, al igual que Javascript, se encarga de la funcionalidad de la pagina, sin embargo este corre del lado del servidor, el usuario ejecutaria una accion en la pagina web la cual enviaria informacion a un script PHP en el servidor el cual la procesaria, luego de ser procesada, esta se traduce a algo que el usuario pueda ver o con lo que pueda interactuar y se le envia al mismo. Esta es la forma mas segura de darle funcionalidad a una pagina web, ya que el Script no es accesible por el usuario, tambien ahorra los recursos del mismo ya que el codigo no se ejecuta en su equipo, mas sin embargo, depende de la estabilidad y velocidad de la red</p>
+				<p>PHP, al igual que Javascript, se encarga de la funcionalidad de la pagina, sin embargo este corre del lado del servidor, el usuario ejecutaria una accion en la pagina web la cual enviaria informacion a un script PHP en el servidor el cual la procesaria, luego de ser procesada, esta se traduce a algo que el usuario pueda ver o con lo que pueda interactuar y se le envia al mismo. Esta es la forma mas segura de darle funcionalidad a una pagina web, ya que el Script no es accesible por el usuario, tambien ahorra los recursos del mismo ya que el codigo no se ejecuta en su equipo, mas sin embargo, depende de la estabilidad y velocidad de la red.</p>
 				
 			</article>
 		</section>
 		<hr>
-		<footer class="darkBackground">Esta es la parte inferior de la pagina, lo mas comun es que contenga informacion importante pero no muy util para el usuario comun, un ejemplo de esto seria el Copyright, los Terminos de Uso, etc
-			<div class="darkBackground">Esta pagina es un prototipo que ira avanzando conforme aprenda cosas nuevas, aun faltan muchos elementos que conozco, mas sin embargo necesito mas tiempo para imaginar una situacion en la que utilizarlos</div>
-			<aside><a class="darkBackground" style="font-weight: bold;" href="https://coursera.pxf.io/c/397676/1213622/14726?subId1=ddhtml1&u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fhtml-css-javascript-for-web-developers" title="Ir a la pagina principal del curso" target="_blank">Este es el curso con el que estoy aprendiendo</a></aside> <!-- Target _blank hace que la pagina se abra en una nueva pestaña-->
+		<footer class="DarkOrangeText">Esta es la parte inferior de la pagina, lo mas comun es que contenga informacion importante pero no muy util para el usuario comun, un ejemplo de esto seria el Copyright, los Terminos de Uso, etc
+			<div class="DarkOrangeText">Esta pagina es un prototipo que ira avanzando conforme aprenda cosas nuevas, aun faltan muchos elementos que conozco, mas sin embargo necesito mas tiempo para imaginar una situacion en la que utilizarlos</div>
+			<aside><a class="DarkOrangeText" style="font-weight: bold;" href="https://coursera.pxf.io/c/397676/1213622/14726?subId1=ddhtml1&u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fhtml-css-javascript-for-web-developers" title="Ir a la pagina principal del curso" target="_blank">Este es el curso con el que estoy aprendiendo</a></aside> <!-- Target _blank hace que la pagina se abra en una nueva pestaña-->
 		</footer>
 </body>
 </html>
