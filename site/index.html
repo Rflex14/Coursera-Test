@@ -6,19 +6,31 @@
 	<title>Primera Pagina web</title>
 	
 	<style>
-
-		h3 {
-			font-size: 30px;
+		.darkBackground {
+			color: orange;
 		}
-		div {
+		footer{
+			margin-left: -20px;
+			margin-right: -10px;
+			margin-top: -9px;
+			margin-bottom: -8px;
+			padding: 20px;
+			background-image: url(img/spaceNC.jpg); 
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		h3 {
+			font-size: 25px;
+		}
+		article div {
 			margin-left: 30px;
 		}
 		hr {
+			margin-top: -2px;
 			margin-left: -21px;
 			margin-right: -10px;
-			margin-top: -2px;
 			background-color: black;
-			padding: 1px;
+			padding: 2px;
 		}
 		header { 
 			background-color: skyblue;
@@ -28,32 +40,32 @@
 			padding: 10px;
 
 		}
- 		body {  
+ 		body {  /* Meddling with Body margin is wrong as fuck, I HAVE to fix this */
    			font-family: sans-serif;
    			margin-left: 20px;
+   			margin-right: 10px;
   	 	}
-   		p {
+   		article p {
    			width: 700px;
-   			padding: 20px;
+   			padding: 10px;
    			border: 2px solid black; 
    			margin-left: 100px;
   	 	} 
 
-	</style> <!--Para hacer cambios generales al documento, toda las caracteristicas de p son para practicar el Box model de CSS-->
+	</style> <!--Para hacer cambios generales al documento, toda las caracteristicas son para practicar el Box model de CSS-->
 
 </head>
 <body>
 
 	<header>
-		<h1>Mi primera pagina web</h1>
-		<h2>Esta es la parte superior de una pagina web, generalmente contiene el nombre y logo de la empresa y puede contener tambien un menu de navegacion</h2>
+		<h1 style="font-size: 35px;">Mi primera pagina web</h1>
+		<span style="font-size: 20px; font-weight: bold;">Esta es la parte superior de una pagina web, generalmente contiene el nombre y logo de la empresa y puede contener tambien un menu de navegacion</span>
 	</header>
 	<hr>
 		<section>
-			<h2>Mi entendimiento hasta el momento</h2>
+			<h2 style="font-size: 30px;">Mi entendimiento hasta el momento</h2>
 			<article>
 				<h3>Html</h3>
-
 				<p>
 					Html es un lenguaje de programacion de paginas web encargado de comunicar la estructura de la pagina, es decir, actua como los planos de una casa, <b>que</b> hay dentro de esta casa y <b>como</b> se ve esta casa depende de otros lenguajes de programacion, un ejemplo claro de esto es que hay multiples tags que a simple vista hacen lo mismo, pero que comunican cosas diferentes, aprender a diferenciarlos ayuda al autor a que su documento sea mas legible por otros humanos y que sea mas facil de interpretar por la Computadora.
 				</p>
@@ -92,9 +104,9 @@
 			</article>
 		</section>
 		<hr>
-		<footer>Esta es la parte inferior de la pagina, lo mas comun es que contenga informacion importante pero no muy util para el usuario comun, un ejemplo de esto seria el Copyright, los Terminos de Uso, etc
-			<div style="margin-left: 0px;">Esta pagina es un prototipo que ira avanzando conforme aprenda cosas nuevas, aun faltan muchos elementos que conozco, mas sin embargo necesito mas tiempo para imaginar una situacion en la que utilizarlos</div>
-			<aside><b> <a href="https://coursera.pxf.io/c/397676/1213622/14726?subId1=ddhtml1&u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fhtml-css-javascript-for-web-developers" title="Ir a la pagina principal del curso" target="_blank">Este es el curso con el que estoy aprendiendo</a></b></aside> <!-- Target _blank hace que la pagina se abra en una nueva pestaña-->
+		<footer class="darkBackground">Esta es la parte inferior de la pagina, lo mas comun es que contenga informacion importante pero no muy util para el usuario comun, un ejemplo de esto seria el Copyright, los Terminos de Uso, etc
+			<div class="darkBackground">Esta pagina es un prototipo que ira avanzando conforme aprenda cosas nuevas, aun faltan muchos elementos que conozco, mas sin embargo necesito mas tiempo para imaginar una situacion en la que utilizarlos</div>
+			<aside><a class="darkBackground" style="font-weight: bold;" href="https://coursera.pxf.io/c/397676/1213622/14726?subId1=ddhtml1&u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fhtml-css-javascript-for-web-developers" title="Ir a la pagina principal del curso" target="_blank">Este es el curso con el que estoy aprendiendo</a></aside> <!-- Target _blank hace que la pagina se abra en una nueva pestaña-->
 		</footer>
 </body>
 </html>
