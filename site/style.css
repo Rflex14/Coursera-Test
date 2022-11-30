@@ -1,0 +1,72 @@
+ul li {
+	list-style: none;
+}
+ul li::before {
+	content: "•"; color: white;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em; /*1em es equivalente al font size siendo utilizado, el default es 16px*/
+	margin-top: 2px;
+}
+ul li:nth-child(3):hover { /*Esta linea especifica que se le aplique el Style al 3er div que se encuentre dentro de un elemento section y que tenga el mouse encima, la propiedad de nth-child tambien puede ser Odd or Even*/
+	background-color: white;
+	color: black;	
+} 
+a:link, a:visited {
+	text-decoration: none;
+	background-color: darkgrey;
+	border: 1px solid black;
+	color: black;
+	display: block;
+	text-align: center;
+	width: 200px;
+	margin-bottom: 1px;
+}
+a:hover, a:active { /*These are Pseudo classes*/
+	background-color: grey;
+}
+nav a:link, nav a:visited {
+	display: inline-block;
+}
+ body { 
+ 	background-color: black;
+ 	color: whitesmoke;
+   	font-family: sans-serif;
+   	margin: 0px;
+}
+header {  
+	background-color: dimgrey;
+	margin-top: -10px;
+	padding: 10px;
+	color: black;
+}
+.bold {
+	font-weight: bold;		
+}
+section { 
+	margin-left: 20px;
+}
+p.Encapsulated { 
+   	width: 700px;
+   	padding: 10px;
+   	border: 2px solid dimgrey; 
+   	margin-left: 100px;
+} 
+article > h3 {
+	font-size: 25px;
+}
+hr { 
+	margin-top: -2px; /*To aligh it with Header*/
+	background-color: white;
+	padding: 2px;
+}
+footer { 
+	margin-top: -9px; /*To align it with hr*/
+	padding: 20px;
+	background-color: dimgrey;
+	color: black;
+}
+a.SmallerA {
+	width: 80px;
+	display: inline-block;
+}

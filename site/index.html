@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Adapta la visualizacion de la pagina al dispositivo-->
+	<link rel="stylesheet" href="style.css"> <!--Llama a el archivo style.css ubicado en la misma carpeta para aplicar su config-->
 	<title>Primera Pagina web</title>
 
 
@@ -22,7 +23,7 @@
 		-Must find a way to make a partition on the left
 		-Must asign and ID to every article- already done, must add more articles tho
 		-Must introduce Links to these articles on the partion on the left
-	image doesnt work on coursera host site
+	Don't know how to use images on coursera host site
 	Find out a way to make Light and Night mode switcheable Live ////////////////////////////
 	 	-Already made the "Selection", must make the script now
 
@@ -37,85 +38,20 @@
 
 
 
-	
-	<style> /*completely fine*/
+	<style type="text/css">
 
-		
-		ul li {
-			list-style: none;
-		}
-		ul li::before {
-			content: "•"; color: white;
-			display: inline-block;
-			width: 1em;
-			margin-left: -1em; /*1em es equivalente al font size siendo utilizado, el default es 16px*/
-			margin-top: 2px;
-		}
-		ul li:nth-child(3):hover { /*Esta linea especifica que se le aplique el Style al 3er div que se encuentre dentro de un elemento section y que tenga el mouse encima, la propiedad de nth-child tambien puede ser Odd or Even*/
-			background-color: white;
-			color: black;	
-		} 
-		a:link, a:visited {
-			text-decoration: none;
-			background-color: darkgrey;
-			border: 1px solid black;
-			color: black;
-			display: block;
-			text-align: center;
-			width: 200px;
-			margin-bottom: 1px;
-		}
-		a:hover, a:active { /*These are Pseudo classes*/
-			background-color: grey;
-		}
-		nav a:link, nav a:visited {
-			display: inline-block;
+		table {
+			margin-bottom: 20px;
+			margin-left: 100px;
+			width: 800px;
 		}
 
-
- 		body { 
- 			background-color: black;
- 			color: whitesmoke;
-   			font-family: sans-serif;
-   			margin: 0px;
-  	 	}
-		header {  
-			background-color: dimgrey;
-			margin-top: -10px;
-			padding: 10px;
-			color: black;
-		}
-		.bold {
-			font-weight: bold;		
-		}
-		section { 
-			margin-left: 20px;
-		}
-		p.Encapsulated { 
-   			width: 700px;
-   			padding: 10px;
-   			border: 2px solid dimgrey; 
-   			margin-left: 100px;
-  	 	} 
-		article > h3 {
-			font-size: 25px;
-		}
-		hr { 
-			margin-top: -2px; /*To aligh it with Header*/
-			background-color: white;
-			padding: 2px;
-		}
-  	 	footer{ 
-			margin-top: -9px; /*To align it with hr*/
-			padding: 20px;
-			background-color: dimgrey;
-			color: black;
-		}
-
-	</style> <!--Para hacer cambios generales al documento, toda las caracteristicas son para practicar el Box model de CSS-->
+	</style>
 
 </head>
 <body>
+
+	<a name="top"></a> <!--Usado para crear un anclaje en la parte superior de la pagina llamado top-->
 
 	<header>
 		<h1 style="font-size: 35px;">Mi primera pagina web</h1>
@@ -135,12 +71,13 @@
 			<a href="#Article2">CSS</a>
 			<a href="#Article3">Javascript</a>
 			<a href="#Article4">PHP</a>
+			<a href="#Detalles_a_recordar">Detalles</a>
 		</nav>
 	</header>
 
 	<hr>
 
-	<section>
+	<section id="Definiciones">
 		<h2 style="font-size: 30px;">Mi entendimiento hasta el momento</h2>
 		<article id="Article1">
 			<h3>Html</h3>
@@ -181,12 +118,39 @@
 				
 		</article>
 	</section>
+	<section id="Detalles_a_recordar">
+
+
+		<h3>Detalles que recordar</h3>
+		<table border="10"> <!--Con este comando se define una tabla-->
+			<tr> <!--Con esto se define una fila-->
+				<td>'table' se usa para introducir una tabla</td> <!--Con esto una columna-->
+				<td>'ul' se usa para introducir una lista desordenada</td>
+				<td>Los elementos tienen Pseudo clases que funcionan como condicionales</td>
+			</tr>
+			<tr>
+				<td>'tr' para definir una fila</td>
+				<td>'ol' para introducir una lista ordenada</td>
+				<td>Las pseudo clase Hover y nth-child fueron utilizadas en la lista ubicada en <a class="SmallerA" href="#Article1">Html</a></td>
+			</tr>
+			<tr>
+				<td>'td' para definir una columna</td>
+				<td>'li' se usa para introducir un elemento a dicha lista</td>
+				<td>A la vez que se uso Before para eliminar el asterisco predeterminado e introducir uno customizable</td>
+			</tr>
+		</table>
+
+
+	</section>
 
 	<hr>
 
 	<footer class="bold">Esta es la parte inferior de la pagina, lo mas comun es que contenga informacion importante pero no muy util para el usuario comun, un ejemplo de esto seria el Copyright, los Terminos de Uso, etc
 		<div>Esta pagina es un prototipo que ira avanzando conforme aprenda cosas nuevas, aun faltan muchos elementos que conozco, mas sin embargo necesito mas tiempo para imaginar una situacion en la que utilizarlos</div>
-		<aside><a href="https://coursera.pxf.io/c/397676/1213622/14726?subId1=ddhtml1&u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fhtml-css-javascript-for-web-developers" title="Ir a la pagina principal del curso" target="_blank">Este es el curso con el que estoy aprendiendo</a></aside> <!-- Target _blank hace que la pagina se abra en una nueva pestaña-->
+		<aside><a style="margin-bottom: 5px; margin-top: 5px;" href="https://coursera.pxf.io/c/397676/1213622/14726?subId1=ddhtml1&u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fhtml-css-javascript-for-web-developers" title="Ir a la pagina principal del curso" target="_blank">Este es el curso con el que estoy aprendiendo</a></aside> <!-- Target _blank hace que la pagina se abra en una nueva pestaña-->
+		<nav>
+			<a href="#top">Volver al comienzo</a>
+		</nav>
 	</footer>
 
 </body>
