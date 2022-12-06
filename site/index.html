@@ -38,8 +38,8 @@
 
 
 
-	<style type="text/css">
-
+	<style>
+		
 		table {
 			margin-bottom: 20px;
 			margin-left: 100px;
@@ -51,7 +51,7 @@
 </head>
 <body>
 
-	<a name="top"></a> <!--Usado para crear un anclaje en la parte superior de la pagina llamado top-->
+	<a id="top"></a> <!--Usado para crear un anclaje en la parte superior de la pagina llamado top-->
 
 	<header>
 		<h1 style="font-size: 35px;">Mi primera pagina web</h1>
@@ -82,7 +82,7 @@
 		<article id="Article1">
 			<h3>Html</h3>
 			<p class="Encapsulated">
-				Html es un lenguaje de programacion de paginas web encargado de comunicar la estructura de la pagina, es decir, actua como los planos de una casa, <b>que</b> hay dentro de esta casa y <b>como</b> se ve esta casa depende de otros lenguajes de programacion, un ejemplo claro de esto es que hay multiples tags que a simple vista hacen lo mismo, pero que comunican cosas diferentes, aprender a diferenciarlos ayuda al autor a que su documento sea mas legible por otros humanos y que sea mas facil de interpretar por la Computadora.
+				Html es un Markup Lenguage de paginas web encargado de comunicar la estructura de la pagina, es decir, actua como los planos de una casa, <b>que</b> hay dentro de esta casa y <b>como</b> se ve esta casa depende de otros lenguajes de programacion, un ejemplo claro de esto es que hay multiples tags que a simple vista hacen lo mismo, pero que comunican cosas diferentes, aprender a diferenciarlos ayuda al autor a que su documento sea mas legible por otros humanos y que sea mas facil de interpretar por la Computadora.
 			</p>
 			<h4>Algunos tags que parecen hacer lo mismo pero no lo hacen:</h4>
 			<ul>
@@ -98,7 +98,7 @@
 			<h3>CSS</h3>
 
 			<p class="Encapsulated">
-				CSS es el encargado del aspecto de la pagina, al comienzo del documento html cambie el estilo general de todo el texto de la pagina a Sans-serif utilizando este lenguaje y si asi lo quisiera, <span style="color: #911;">podria cambiar el color,</span> <span style="font-size: 22px">tamaño</span> y muchas otras caracteristicas.
+				CSS es el encargado del aspecto de la pagina, al comienzo del documento html cambie el estilo general de todo el texto de la pagina a Sans-serif utilizando este lenguaje y si asi lo quisiera, <span style="color: #911;">podria cambiar el color,</span> <span style="font-size: 130% /*default is 16, so 130% of 16*/">tamaño</span> y muchas otras caracteristicas.
 			</p>
 			<div>Este lenguaje debe ser utilizado para cambiar la visualizacion de la pagina a costa de otros elementos html que harian lo mismo, un ejemplo de un elemento html reemplazado por una funcionalidad de CSS vendria siendo &lt;Center&gt;.
 			Este elemento ubica todo su contenido en el centro de la pagina, mas sin embargo esto puede ser realizado con CSS facilmente y permitiendo mas personalizacion.</div>
@@ -122,21 +122,24 @@
 
 
 		<h3>Detalles que recordar</h3>
-		<table border="10"> <!--Con este comando se define una tabla-->
+		<table> <!--Con este comando se define una tabla-->
 			<tr> <!--Con esto se define una fila-->
-				<td>'table' se usa para introducir una tabla</td> <!--Con esto una columna-->
-				<td>'ul' se usa para introducir una lista desordenada</td>
-				<td>Los elementos tienen Pseudo clases que funcionan como condicionales</td>
+				<th>'table' se usa para introducir una tabla</td> <!--Con esto una columna-->
+				<th>'ul' se usa para introducir una lista desordenada</td>
+				<th>Los elementos tienen Pseudo clases que funcionan como condicionales</td>
+				<th>Cuando dos reglas Css son conflictivas, se toma la regla que tenga major puntaje en el siguiente orden</td>
 			</tr>
 			<tr>
 				<td>'tr' para definir una fila</td>
 				<td>'ol' para introducir una lista ordenada</td>
 				<td>Las pseudo clase Hover y nth-child fueron utilizadas en la lista ubicada en <a class="SmallerA" href="#Article1">Html</a></td>
+				<td><span class="highlight">Style=</span>---<span class="highlight">ID</span>---<span class="highlight">Class, Pseudo-class, atribute</span>---<span class="highlight">#of elements</span></td>
 			</tr>
 			<tr>
 				<td>'td' para definir una columna</td>
 				<td>'li' se usa para introducir un elemento a dicha lista</td>
 				<td>A la vez que se uso Before para eliminar el asterisco predeterminado e introducir uno customizable</td>
+				<td>si el puntaje es el mismo, la que haya sido declarada de ultimo es la aplicada, pero si ambas reglas pueden coexistir, se combinan</td>
 			</tr>
 		</table>
 

@@ -2,43 +2,46 @@ ul li {
 	list-style: none;
 }
 ul li::before {
-	content: "•"; color: white;
+	content: "•"; color: #ffffff; /*White*/
 	display: inline-block;
 	width: 1em;
 	margin-left: -1em; /*1em es equivalente al font size siendo utilizado, el default es 16px*/
 	margin-top: 2px;
 }
 ul li:nth-child(3):hover { /*Esta linea especifica que se le aplique el Style al 3er div que se encuentre dentro de un elemento section y que tenga el mouse encima, la propiedad de nth-child tambien puede ser Odd or Even*/
-	background-color: white;
-	color: black;	
+	background-color: #ffffff; /*White*/
+	color: #000000;	/*Black*/
 } 
 a:link, a:visited {
 	text-decoration: none;
-	background-color: darkgrey;
-	border: 1px solid black;
-	color: black;
+	background-color: #a9a9a9; /*Darkgrey*/
+	border: 1px solid #000000; /*Black*/
+	color: #0000ff; /*Este es un numero hexadecimal, es la forma correcta de especificar el color, los 2 primeros numeros son rojo, los 2 siguientes verde y los 2 ultimos azul, ff es el valor mas alto de azul*/ 
 	display: block;
 	text-align: center;
 	width: 200px;
 	margin-bottom: 1px;
 }
 a:hover, a:active { /*These are Pseudo classes*/
-	background-color: grey;
+	background-color: #808080; /*Grey*/
 }
 nav a:link, nav a:visited {
 	display: inline-block;
 }
  body { 
- 	background-color: black;
- 	color: whitesmoke;
-   	font-family: sans-serif;
-   	margin: 0px;
+ 	background-color: #000000; /*Black*/
+ 	margin: 0px;
+ 	color: #ffffff; /*White*/
+   	font-family: Arial, Helvetica, sans-serif;
+   	font-style: normal;
+   	font-size: 16px;
+   	text-align: justify-all;
 }
 header {  
-	background-color: dimgrey;
+	background-color: #696969; /*Dimgrey*/
 	margin-top: -10px;
 	padding: 10px;
-	color: black;
+	color: #000000; /*Black*/
 }
 .bold {
 	font-weight: bold;		
@@ -47,9 +50,9 @@ section {
 	margin-left: 20px;
 }
 p.Encapsulated { 
-   	width: 700px;
+   	max-width: 700px;
    	padding: 10px;
-   	border: 2px solid dimgrey; 
+   	border: 2px solid #696969; /*Dimgrey*/
    	margin-left: 100px;
 } 
 article > h3 {
@@ -57,16 +60,32 @@ article > h3 {
 }
 hr { 
 	margin-top: -2px; /*To aligh it with Header*/
-	background-color: white;
+	background-color: #ffffff; /*White*/
 	padding: 2px;
 }
 footer { 
 	margin-top: -9px; /*To align it with hr*/
 	padding: 20px;
-	background-color: dimgrey;
-	color: black;
+	background-color: #696969; /*Dimgrey*/
+	color: #000000; /*Black*/
 }
 a.SmallerA {
 	width: 80px;
 	display: inline-block;
+}
+span.highlight {
+	text-decoration: underline;
+	text-decoration-color: #8b0000; /*Dark red*/
+	text-decoration-thickness: 3px;
+	font-weight: bold;
+}
+th, td, table {
+	border: 2px;
+	border-color: #808080; /*Grey*/
+	border-style: solid;
+	border-collapse: collapse;
+	padding: 10px;
+}
+select {
+	background: #a9a9a9; /*Darkgrey*/
 }
