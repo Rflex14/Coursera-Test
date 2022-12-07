@@ -1,32 +1,5 @@
-ul li {
-	list-style: none;
-}
-ul li::before {
-	content: "•"; color: #ffffff; /*White*/
-	display: inline-block;
-	width: 1em;
-	margin-left: -1em; /*1em es equivalente al font size siendo utilizado, el default es 16px*/
-	margin-top: 2px;
-}
-ul li:nth-child(3):hover { /*Esta linea especifica que se le aplique el Style al 3er div que se encuentre dentro de un elemento section y que tenga el mouse encima, la propiedad de nth-child tambien puede ser Odd or Even*/
-	background-color: #ffffff; /*White*/
-	color: #000000;	/*Black*/
-} 
-a:link, a:visited {
-	text-decoration: none;
-	background-color: #a9a9a9; /*Darkgrey*/
-	border: 1px solid #000000; /*Black*/
-	color: #0000ff; /*Este es un numero hexadecimal, es la forma correcta de especificar el color, los 2 primeros numeros son rojo, los 2 siguientes verde y los 2 ultimos azul, ff es el valor mas alto de azul*/ 
-	display: block;
-	text-align: center;
-	width: 200px;
-	margin-bottom: 1px;
-}
-a:hover, a:active { /*These are Pseudo classes*/
-	background-color: #808080; /*Grey*/
-}
-nav a:link, nav a:visited {
-	display: inline-block;
+* { /*  '*' Means every element  */
+	box-sizing: border-box;  /*box-sizing: border-box; makes the width and height accountant of not only the content, but the padding and border as well*/
 }
  body { 
  	background-color: #000000; /*Black*/
@@ -34,8 +7,8 @@ nav a:link, nav a:visited {
  	color: #ffffff; /*White*/
    	font-family: Arial, Helvetica, sans-serif;
    	font-style: normal;
-   	font-size: 16px;
-   	text-align: justify-all;
+  	text-align: justify;
+   	
 }
 header {  
 	background-color: #696969; /*Dimgrey*/
@@ -69,10 +42,6 @@ footer {
 	background-color: #696969; /*Dimgrey*/
 	color: #000000; /*Black*/
 }
-a.SmallerA {
-	width: 80px;
-	display: inline-block;
-}
 span.highlight {
 	text-decoration: underline;
 	text-decoration-color: #8b0000; /*Dark red*/
@@ -88,4 +57,38 @@ th, td, table {
 }
 select {
 	background: #a9a9a9; /*Darkgrey*/
+}
+ul li {
+	list-style: none;
+}
+ul li::before {
+	content: "•"; color: #ffffff; /*White*/
+	display: inline-block;
+	width: 1em;
+	margin: 2px 0px 0px -1em; /*Cada numero modifica cada lado en este orden Top-Right-Down-Left*/
+}
+ul li:nth-child(3):hover { /*Esta linea especifica que se le aplique el Style al 3er div que se encuentre dentro de un elemento section y que tenga el mouse encima, la propiedad de nth-child tambien puede ser Odd or Even*/
+	background-color: #ffffff; /*White*/
+	color: #000000;	/*Black*/
+} 
+a:link, a:visited {
+	text-decoration: none;
+	background-color: #a9a9a9; /*Darkgrey*/
+	border: 1px solid #000000; /*Black*/
+	color: #0000ff; /*Este es un numero hexadecimal, es la forma correcta de especificar el color, los 2 primeros numeros son rojo, los 2 siguientes verde y los 2 ultimos azul, ff es el valor mas alto de azul*/ 
+	display: block;
+	text-align: center;
+	width: 202px;
+	padding-top: 1px;
+	margin-bottom: 1px;
+}
+a:hover, a:active { /*These are Pseudo classes*/
+	background-color: #808080; /*Grey*/
+}
+nav a:link, nav a:visited {
+	display: inline-block;
+}
+a.SmallerA {
+	width: 70px;
+	display: inline-block;
 }
