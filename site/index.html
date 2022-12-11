@@ -2,9 +2,12 @@
 <html lang="es_VE">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Adapta la visualizacion de la pagina al dispositivo-->
-	<link rel="stylesheet" href="style.css"> <!--Llama a el archivo style.css ubicado en la misma carpeta para aplicar su config-->
-	<title>Primera Pagina web</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Adapta la visualizacion de la pagina al dispositivo, hace que por defecto, al entrar a la pagina, el zoom sea 100%-->
+	<title>ELDEN RING GOTY 2022</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css"> <!--Llama a mis styles despues de los de bootstrap para poder sobrescribir cualquier style de bootstrap y no al revez-->
 
 
 
@@ -18,14 +21,21 @@
 	<!--To do list
 
 	Maybe theres a way to fix footer and header without MARGIN
-	<hr> cant reach fully to the right without streching the page
+	<hr> cant reach fully to the right without streching the page (Solved on it's own? maybe was using an innefective method somewhere else and then replaced it)
 	Must add a menu to the left that allows to jump to every article in the page
-		-Must find a way to make a partition on the left
-		-Must asign and ID to every article- already done, must add more articles tho
+		-Must find a way to make a partition on the left (Already done with float, i think)
+		-Must asign and ID to every article- (already done, must add more articles tho)
 		-Must introduce Links to these articles on the partion on the left
 	Don't know how to use images on coursera host site
 	Find out a way to make Light and Night mode switcheable Live ////////////////////////////
 	 	-Already made the "Selection", must make the script now
+
+
+
+
+	 -Debo usar @media para soportar dispositivos moviles en la pagina y reorganizar todos los elementos para que encajen en el modelo de 12 columnas y que sean mas facilmente divisibles entre el ancho del dispositivo (Already made a considerable effort to traduce the work done to a similar logic, however I'm not using precise 12 columms model percentages, must doble check with a clearer head)
+	 -Debo arreglar el display de los parrafos en relacion a el side menu y el alto del side menu en relacion a la pantalla, una idea es que ocupe todo el display en Height pero que sea un menu desplegable
+	 -Must fix bottom Hr in relation to footer
 
 	-->
 
@@ -39,21 +49,11 @@
 
 
 	<style>
-		
+
 		table {
-			margin-bottom: 20px;
-			margin-left: 100px;
-			width: 800px;
-		}
-		#sideMenu {
-			margin-top: -2px;
-			float: left;
-			width: 13%;  /*Still a lot to try*/
-			height: 96.5em;
-			border: 4px solid #ffffff;
-		}
-		.sideMenu {
-			
+			margin-bottom: 1.10em;
+			margin-left: 6.25em;
+			width: 57,14vw;
 		}
 	</style>
 
@@ -62,20 +62,22 @@
 
 	<a id="top"></a> <!--Usado para crear un anclaje en la parte superior de la pagina llamado top-->
 
-	<header>
-		<h1 style="font-size: 35px;">Mi primera pagina web</h1>
-		<div class="bold" style="font-size: 20px;">Esta es la parte superior de una pagina web, generalmente contiene el nombre y logo de la empresa y puede contener tambien un menu de navegacion</div>
-		<br>
-		<form> 
-			<label style="font-weight: bold;">Color de la pagina:</label>
+	<header class="container-fluid">
+		<div class="row">
+			<h1 class="cl-lg-3">Mi primera pagina web</h1>
+			<div class="bold" style="font-size: 1.10em;">Esta es la parte superior de una pagina web, generalmente contiene el nombre y logo de la empresa y puede contener tambien un menu de navegacion</div>
 			<br>
-			<select>
-				<option value="DarkMode">Modo oscuro</option>
-				<option value="LightMode">Modo claro</option>
-			</select>
-		</form>
-		<label>Menu de navegacion</label>
-		<nav>
+			<form> 
+				<label style="font-weight: bold;">Color de la pagina:</label>
+				<br>
+				<select>
+					<option value="DarkMode">Modo oscuro</option>
+					<option value="LightMode">Modo claro</option>
+				</select>
+			</form>
+			<label>Menu de navegacion</label>
+		</div>
+		<nav class="row">
 			<a href="#Article1">Html</a>
 			<a href="#Article2">CSS</a>
 			<a href="#Article3">Javascript</a>
@@ -84,14 +86,11 @@
 		</nav>
 	</header>
 
-	<div id="sideMenu">
-		<p class="sideMenu">Hola que tal</p>
-	</div>
-
 	<hr>
 
-	<section id="Definiciones">
-		<h2 style="font-size: 30px;">Mi entendimiento hasta el momento</h2>
+	<section class="container-fluid" id="Definiciones">
+		<div class="row">
+		<h2 style="font-size: 1.53em;">Mi entendimiento hasta el momento</h2>
 		<article id="Article1">
 			<h3>Html</h3>
 			<p class="Encapsulated">
@@ -130,6 +129,7 @@
 			<p class="Encapsulated">PHP, al igual que Javascript, se encarga de la funcionalidad de la pagina, sin embargo este corre del lado del servidor, el usuario ejecutaria una accion en la pagina web la cual enviaria informacion a un script PHP en el servidor el cual la procesaria, luego de ser procesada, esta se traduce a algo que el usuario pueda ver o con lo que pueda interactuar y se le envia al mismo. Esta es la forma mas segura de darle funcionalidad a una pagina web, ya que el Script no es accesible por el usuario, tambien ahorra los recursos del mismo ya que el codigo no se ejecuta en su equipo, mas sin embargo, depende de la estabilidad y velocidad de la red.</p>
 				
 		</article>
+		</div>
 	</section>
 	<section id="Detalles_a_recordar">
 
@@ -161,13 +161,17 @@
 
 	<hr>
 
-	<footer class="bold">Esta es la parte inferior de la pagina, lo mas comun es que contenga informacion importante pero no muy util para el usuario comun, un ejemplo de esto seria el Copyright, los Terminos de Uso, etc
-		<div>Esta pagina es un prototipo que ira avanzando conforme aprenda cosas nuevas, aun faltan muchos elementos que conozco, mas sin embargo necesito mas tiempo para imaginar una situacion en la que utilizarlos</div>
-		<aside><a style="margin-bottom: 5px; margin-top: 5px;" href="https://coursera.pxf.io/c/397676/1213622/14726?subId1=ddhtml1&u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fhtml-css-javascript-for-web-developers" title="Ir a la pagina principal del curso" target="_blank">Este es el curso con el que estoy aprendiendo</a></aside> <!-- Target _blank hace que la pagina se abra en una nueva pestaña-->
-		<nav>
+	<footer class="bold container-fluid">Esta es la parte inferior de la pagina, lo mas comun es que contenga informacion importante pero no muy util para el usuario comun, un ejemplo de esto seria el Copyright, los Terminos de Uso, etc
+		<div class="row">
+			<div>Esta pagina es un prototipo que ira avanzando conforme aprenda cosas nuevas, aun faltan muchos elementos que conozco, mas sin embargo necesito mas tiempo para imaginar una situacion en la que utilizarlos</div>
+			<a href="https://coursera.pxf.io/c/397676/1213622/14726?subId1=ddhtml1&u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fhtml-css-javascript-for-web-developers" title="Ir a la pagina principal del curso" target="_blank">Este es el curso con el que estoy aprendiendo</a> <!-- Target _blank hace que la pagina se abra en una nueva pestaña-->
+		</div>
+		<div class="row">
 			<a href="#top">Volver al comienzo</a>
-		</nav>
+		</div>
 	</footer>
-
+	<script src="js/jquery-3.6.1.min.js"></script> <!--Bootstrap depends on jquery, so it must be called first-->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script> <!--To use our own js-->
 </body>
 </html>

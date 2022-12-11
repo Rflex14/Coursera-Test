@@ -1,59 +1,99 @@
 * { /*  '*' Means every element  */
 	box-sizing: border-box;  /*box-sizing: border-box; makes the width and height accountant of not only the content, but the padding and border as well*/
 }
- body { 
+a:link, a:visited {
+	text-decoration: none;
+	background-color: #a9a9a9; /*Darkgrey*/
+	border: 0.05em solid #000000; /*Black*/
+	color: #0000ff; /*Este es un numero hexadecimal, es la forma correcta de especificar el color, los 2 primeros numeros son rojo, los 2 siguientes verde y los 2 ultimos azul, ff es el valor mas alto de azul*/ 
+	display: block;
+	text-align: center;
+	padding-top: 0.05em;
+	margin-top: 0.05em;
+}
+a:hover, a:active { /*These are Pseudo classes*/
+	background-color: #808080; /*Grey*/
+}
+body { 
  	background-color: #000000; /*Black*/
  	margin: 0px;
  	color: #ffffff; /*White*/
    	font-family: Arial, Helvetica, sans-serif;
    	font-style: normal;
   	text-align: justify;
-   	
+}
+p.Encapsulated { 
+   	max-width: 50%;
+   	padding: 0.85em;
+   	border: 0.10em solid #696969; /*Dimgrey*/
+   	margin-left: 6.25em;
+} 
+
+@media (min-width: 1200px) {
+	body {	
+		font-size: 1.1428571428571vw; /*All these obscene percentajes are the result of me manteining my original sizes based on a 1400px wide screen*/
+	}
+	a:link, a:visited {
+		width: 14.428571428571%;
+		margin-left: 0.8em;
+	}
+	a.SmallerA {
+		width: 25%; /*En relacion al tamano de su contenedor*/
+		display: inline-block;
+		margin: 0;
+	}
+}
+@media (max-width: 1199px) {
+	body {
+		font-size: 2vw;
+	}
+	a:link, a:visited {
+		width: 100%;
+		margin-bottom: 0.2em;
+	}
+	p.Encapsulated {
+		max-width: 80%;
+	}
 }
 header {  
 	background-color: #696969; /*Dimgrey*/
-	margin-top: -10px;
-	padding: 10px;
+	margin-top: -0.85em;
+	padding: 0.85em;
 	color: #000000; /*Black*/
 }
 .bold {
 	font-weight: bold;		
 }
 section { 
-	margin-left: 20px;
+	margin-left: 1.1em;
 }
-p.Encapsulated { 
-   	max-width: 700px;
-   	padding: 10px;
-   	border: 2px solid #696969; /*Dimgrey*/
-   	margin-left: 100px;
-} 
 article > h3 {
-	font-size: 25px;
+	font-size: 1.64em;
 }
 hr { 
-	margin-top: -2px; /*To aligh it with Header*/
+	margin-top: 0px; /*To aligh it with Header*/
 	background-color: #ffffff; /*White*/
-	padding: 2px;
+	padding: 0.10em;
 }
 footer { 
-	margin-top: -9px; /*To align it with hr*/
-	padding: 20px;
+	margin-top: 0px; /*To align it with hr*/
+	padding: 1.10em;
 	background-color: #696969; /*Dimgrey*/
 	color: #000000; /*Black*/
 }
 span.highlight {
 	text-decoration: underline;
 	text-decoration-color: #8b0000; /*Dark red*/
-	text-decoration-thickness: 3px;
+	text-decoration-thickness: 0.15em;
 	font-weight: bold;
 }
 th, td, table {
-	border: 2px;
+	max-width: 80%;
+	border: 0.10em;
 	border-color: #808080; /*Grey*/
 	border-style: solid;
 	border-collapse: collapse;
-	padding: 10px;
+	padding: 0.85em;
 }
 select {
 	background: #a9a9a9; /*Darkgrey*/
@@ -65,30 +105,11 @@ ul li::before {
 	content: "•"; color: #ffffff; /*White*/
 	display: inline-block;
 	width: 1em;
-	margin: 2px 0px 0px -1em; /*Cada numero modifica cada lado en este orden Top-Right-Down-Left*/
+	margin: 0.10em 0px 0px -1em; /*Cada numero modifica cada lado en este orden Top-Right-Down-Left*/
 }
 ul li:nth-child(3):hover { /*Esta linea especifica que se le aplique el Style al 3er div que se encuentre dentro de un elemento section y que tenga el mouse encima, la propiedad de nth-child tambien puede ser Odd or Even*/
 	background-color: #ffffff; /*White*/
 	color: #000000;	/*Black*/
 } 
-a:link, a:visited {
-	text-decoration: none;
-	background-color: #a9a9a9; /*Darkgrey*/
-	border: 1px solid #000000; /*Black*/
-	color: #0000ff; /*Este es un numero hexadecimal, es la forma correcta de especificar el color, los 2 primeros numeros son rojo, los 2 siguientes verde y los 2 ultimos azul, ff es el valor mas alto de azul*/ 
-	display: block;
-	text-align: center;
-	width: 202px;
-	padding-top: 1px;
-	margin-bottom: 1px;
-}
-a:hover, a:active { /*These are Pseudo classes*/
-	background-color: #808080; /*Grey*/
-}
-nav a:link, nav a:visited {
-	display: inline-block;
-}
-a.SmallerA {
-	width: 70px;
-	display: inline-block;
-}
+
+
