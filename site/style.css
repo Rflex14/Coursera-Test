@@ -23,7 +23,6 @@ body {
   	text-align: justify;
 }
 p.Encapsulated { 
-   	max-width: 50%;
    	padding: 0.85em;
    	border: 0.10em solid #696969; /*Dimgrey*/
    	margin-left: 6.25em;
@@ -36,13 +35,14 @@ th, td, tr, table {
 	border-collapse: collapse;  /*Had to make the table an Inline-table element to give it an horizontal scrollbar, now there are 2 outer borders, doesn't look bad tho*/
 	text-align: justify; 
 	max-width: 100%;
+
 }
 th, td, tr {
 	padding: 0.25em;
 	margin: -1em;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
 	body {	
 		font-size: 1.1428571428571vw; /*All these obscene percentajes are the result of me manteining my original sizes based on a 1400px wide screen*/
 	}
@@ -55,17 +55,20 @@ th, td, tr {
 		display: inline-block;
 		margin: 0;
 	}
+	p.Encapsulated {
+		width: 50%;
+	}
 }
-@media (max-width: 1199px) (min-width: 768px) {
+@media (max-width: 991px) and (min-width: 768px) {
 	body {
-		font-size: 4vw;
+		font-size: 2vw;
 	}
 	a:link, a:visited {
 		width: 100%;
 		margin-bottom: 0.2em;
 	}
 	p.Encapsulated {
-		max-width: 80%;
+		width: 60%;
 	}
 }
 @media (max-width: 767px) {
