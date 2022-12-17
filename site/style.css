@@ -1,12 +1,17 @@
-* { /*  '*' Means every element  */
-	box-sizing: border-box;  /*box-sizing: border-box; makes the width and height accountant of not only the content, but the padding and border as well*/
+
+h1._brand_ {
+	text-shadow: 1px 1px 2px #101010;
 }
-a:link, a:visited {
+h2.h2postheader {
+	margin-top: 0.20em;
+	font-size: 1.53em;
+}
+a.button:link, a.button:visited {
 	text-decoration: none;
 	background-color: #a9a9a9; /*Darkgrey*/
-	border: 0.05em solid #000000; /*Black*/
-	color: #0000ff; /*Este es un numero hexadecimal, es la forma correcta de especificar el color, los 2 primeros numeros son rojo, los 2 siguientes verde y los 2 ultimos azul, ff es el valor mas alto de azul*/ 
-	display: block;
+	border: 0.05em solid #000; /*Black*/
+	color: #00f; /*Este es un numero hexadecimal (En este caso simplificado), es la forma correcta de especificar el color, los 2 primeros numeros son rojo, los 2 siguientes verde y los 2 ultimos azul, ff es el valor mas alto de azul*/ 
+	display: inline;
 	text-align: center;
 	padding-top: 0.05em;
 	margin-top: 0.05em;
@@ -15,10 +20,10 @@ a:hover, a:active { /*These are Pseudo classes*/
 	background-color: #808080; /*Grey*/
 }
 body { 
- 	background-color: #000000; /*Black*/
+ 	background-color: #000; /*Black*/
  	margin: 0px;
- 	color: #ffffff; /*White*/
-   	font-family: Arial, Helvetica, sans-serif;
+ 	color: #fff; /*White*/
+   	font-family: 'Oxygen', sans-serif;
    	font-style: normal;
   	text-align: justify;
 }
@@ -42,45 +47,55 @@ th, td, tr {
 	margin: -1em;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) { /*lg meaning large, there is also xl beginning on 1200px and xxl on 1400px*/
 	body {	
 		font-size: 1.1428571428571vw; /*All these obscene percentajes are the result of me manteining my original sizes based on a 1400px wide screen*/
 	}
-	a:link, a:visited {
+	a.button:link, a.button:visited {
 		width: 14.428571428571%;
-		margin-left: 0.8em;
+		margin-left: 12px;
 	}
 	a.SmallerA {
 		width: 25%; /*En relacion al tamano de su contenedor*/
-		display: inline-block;
-		margin: 0;
-	}
-	p.Encapsulated {
-		width: 50%;
+		display: inline-block!important; /*Quiza puedo modificar el css para no necesitar este important aqui*/
+		margin: 0px;
 	}
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 991px) and (min-width: 768px) { /*md meaning medium*/
 	body {
 		font-size: 2vw;
 	}
-	a:link, a:visited {
+	a.button:link, a.button:visited {
 		width: 100%;
 		margin-bottom: 0.2em;
 	}
-	p.Encapsulated {
-		width: 60%;
-	}
 }
-@media (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 767px) { /*sm meaning small*/
 	body {
 		font-size: 4vw;
 	}
-	a:link, a:visited {
+	a.button:link, a.button:visited {
 		width: 100%;
 		margin-bottom: 0.2em;
 	}
 	p.Encapsulated {
-		max-width: 100%;
+		margin: 0em;
+	}
+	table {
+		display: flex;
+		overflow: hidden; /*To make sure the content doesnt spill out and widends the page*/
+		overflow-x: scroll;
+	}
+}
+@media (max-width: 575px) { /*xs meaning extra small*/
+	body {
+		font-size: 4vw;
+	}
+	a.button:link, a.button:visited {
+		width: 100%;
+		margin-bottom: 0.2em;
+	}
+	p.Encapsulated {
 		margin: 0em;
 	}
 	table {
@@ -93,7 +108,7 @@ header {
 	background-color: #696969; /*Dimgrey*/
 	margin-top: -0.85em;
 	padding: 0.85em;
-	color: #000000; /*Black*/
+	color: #000; /*Black*/
 }
 .bold {
 	font-weight: bold;		
@@ -106,15 +121,18 @@ article > h3 {
 	font-size: 1.64em;
 }
 hr { 
+	margin-bottom: 0px;
 	margin-top: 0px; /*To aligh it with Header*/
-	background-color: #ffffff; /*White*/
-	padding: 0.10em;
+	background-color: #404040;
+	padding: 0.20em;
+	border-top: 0px;
+	opacity: 1;
 }
 footer { 
 	margin-top: 0px; /*To align it with hr*/
 	padding: 1.10em;
 	background-color: #696969; /*Dimgrey*/
-	color: #000000; /*Black*/
+	color: #000; /*Black*/
 }
 span.highlight {
 	text-decoration: underline;
@@ -129,14 +147,14 @@ ul li {
 	list-style: none;
 }
 ul li::before {
-	content: "•"; color: #ffffff; /*White*/
+	content: "•"; color: #fff; /*White*/
 	display: inline-block;
 	width: 1em;
 	margin: 0.10em 0px 0px -1em; /*Cada numero modifica cada lado en este orden Top-Right-Down-Left*/
 }
 ul li:nth-child(3):hover { /*Esta linea especifica que se le aplique el Style al 3er div que se encuentre dentro de un elemento section y que tenga el mouse encima, la propiedad de nth-child tambien puede ser Odd or Even*/
-	background-color: #ffffff; /*White*/
-	color: #000000;	/*Black*/
+	background-color: #fff; /*White*/
+	color: #000;	/*Black*/
 } 
 
 
