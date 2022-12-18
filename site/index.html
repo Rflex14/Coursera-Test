@@ -64,14 +64,8 @@
 
 			<h1 class="_brand_">Mi primera pagina web</h1>
 			<div class="bold" style="font-size: 1.10em;">Esta es la parte superior de una pagina web, generalmente contiene el nombre y logo de la empresa y puede contener tambien un menu de navegacion</div>
-			<form class="d-none d-md-inline">  <!--Makes the display none when the width is bigger than 0 pixels, then makes it inline when it's of a medium size '768px' or higher, effectively removing it from smaller devices-->
-				<label class="bold">Color de la pagina:</label>
-				<br>
-				<select>
-					<option value="DarkMode">Modo oscuro</option>
-					<option value="LightMode">Modo claro</option>
-				</select>
-			</form>
+			<button class="theme-btn-dark col-5 d-none d-md-inline" onclick="setTheme('dark')" title="DarkMode">Dark Mode</button>
+   			<button class="theme-btn-light col-5 d-none d-md-inline" onclick="setTheme('light')" title="LightMode">Light Mode</button> 
 			<label class="d-none d-md-flex">Menu de navegacion</label>
 			<span class="row d-none d-md-flex">
 				<a class="button" href="#Article1">Html</a>
@@ -102,8 +96,8 @@
    					<a class="dropdown-item" href="#Detalles_a_recordar">Detalles</a>
    					<hr class="dropdown-divider bg-dark">
    					<h6 class="dropdown-header">Visualizacion</h6>
-   					<option class="dropdown-item" >Dark Mode</option>
-   					<option class="dropdown-item" >Light Mode</option> <!--Necesito que el modo seleccionado este sobresaltado-->
+   					<button class="theme-darkbtn-pressed dropdown-item" onclick="setTheme('dark')" title="DarkMode">Dark Mode</button>
+   					<button class="theme-lightbtn-pressed dropdown-item" onclick="setTheme('light')" title="LightMode">Light Mode</button> <!--Necesito que el modo seleccionado este sobresaltado-->
   				</div>
 			</div>
 

@@ -1,6 +1,6 @@
 
 h1._brand_ {
-	text-shadow: 1px 1px 2px #101010;
+	text-shadow: 1px 1px 2px var(--text-shadow-color-h1);
 }
 h2.h2postheader {
 	margin-top: 0.20em;
@@ -8,34 +8,107 @@ h2.h2postheader {
 }
 a.button:link, a.button:visited {
 	text-decoration: none;
-	background-color: #a9a9a9; /*Darkgrey*/
-	border: 0.05em solid #000; /*Black*/
-	color: #00f; /*Este es un numero hexadecimal (En este caso simplificado), es la forma correcta de especificar el color, los 2 primeros numeros son rojo, los 2 siguientes verde y los 2 ultimos azul, ff es el valor mas alto de azul*/ 
+	background-color: var(--bg-color-a-link-visited_select); /*Darkgrey*/
+	border: 0.05em solid var(--border-color-a-link-visited); /*Black*/
+	color: var(--text-color-a-link-visited); /*Este es un numero hexadecimal (En este caso simplificado), es la forma correcta de especificar el color, los 2 primeros numeros son rojo, los 2 siguientes verde y los 2 ultimos azul, ff es el valor mas alto de azul*/ 
 	display: inline;
 	text-align: center;
 	padding-top: 0.05em;
 	margin-top: 0.05em;
 }
 a:hover, a:active { /*These are Pseudo classes*/
-	background-color: #808080; /*Grey*/
+	background-color: var(--bg-color-a-hover-active)!important; /*need to figure out why !important is needed and if possible, not use it*/
 }
+/*Buttons to ugly, mobile ones kinda ok*/
+button.theme-btn-dark {
+	background-color: var(--theme-btn-dark);
+	border: 1px solid var(--bg-color-body);
+	color: var(--text-color-a-link-visited);
+}
+button.theme-btn-light {
+	background-color: var(--theme-btn-light);
+	border: 1px solid var(--bg-color-body);
+	color: var(--text-color-a-link-visited);
+}
+button.theme-darkbtn-pressed {
+	background-color: var(--theme-darkbtn-pressed);
+
+}
+button.theme-lightbtn-pressed {
+	background-color: var(--theme-lightbtn-pressed);
+
+}
+:root, 
+	:root.dark {
+		 	--bg-color-body: #000; /*Black*/
+ 			--text-color-body: #fff; /*White*/
+ 			--bg-color-hr-Bsections: #404040;; /*Gray*/
+ 			--bg-color-a-hover-active: #808080; /*Gray*/
+ 			--bg-color-a-link-visited_select: #a9a9a9; /*Darkgrey*/
+ 			--border-color-a-link-visited: #000;
+ 			--text-color-a-link-visited: #00f; /*Blue*/
+ 			--text-shadow-color-h1:	#101010;
+ 			--bg-color-header_footer: #696969; /*Dimgrey*/
+ 			--text-color-header_footer: #000;
+ 			--border-color-p-Encapsulated: #696969;
+ 			--textdecoration-color-span-highlight: #8b0000; /*dark red*/
+ 			--border-color-th_td_tr_table: #808080;
+
+ 			--content-color-ul-li-before: #fff;
+ 			--bg-color-ul-li-nth-child-3-hover: #fff;
+ 			--text-color-ul-li-nth-child-3-hover: #000;
+
+ 			--theme-btn-dark: #707070;
+ 			--theme-btn-light: #a9a9a9;
+ 			--theme-darkbtn-pressed: rgba(255,255,255,.3); /*rgb channel and opacity value*/
+ 			--theme-lightbtn-pressed: ;
+
+
+	}
+	:root.light {
+			--bg-color-body: #fff;
+			--text-color-body: #000;
+
+			/*Changeable ones:*/
+			--bg-color-hr-Bsections: #404040; 
+			--bg-color-a-hover-active: #808080;
+			--bg-color-a-link-visited_select: #a9a9a9;
+			--border-color-a-link-visited: #fff;
+			--text-color-a-link-visited: #00f;
+			--text-shadow-color-h1:	#101010;
+ 			--bg-color-header_footer: #696969; /*Dimgrey*/
+ 			--text-color-header_footer: #fff;
+ 			--border-color-p-Encapsulated: #696969;
+ 			--textdecoration-color-span-highlight: #8b0000; /*dark red*/
+ 			--border-color-th_td_tr_table: #808080;
+
+ 			--content-color-ul-li-before: #000;
+ 			--bg-color-ul-li-nth-child-3-hover: #000;
+ 			--text-color-ul-li-nth-child-3-hover: #fff;
+
+ 			--theme-btn-dark: #a9a9a9;
+ 			--theme-btn-light: #707070;
+ 			--theme-darkbtn-pressed: ;
+ 			--theme-lightbtn-pressed: rgba(255,255,255,.3);
+	}
+
 body { 
- 	background-color: #000; /*Black*/
+	background-color: var(--bg-color-body);
+	color: var(--text-color-body);
  	margin: 0px;
- 	color: #fff; /*White*/
    	font-family: 'Oxygen', sans-serif;
    	font-style: normal;
   	text-align: justify;
 }
 p.Encapsulated { 
    	padding: 0.85em;
-   	border: 0.10em solid #696969; /*Dimgrey*/
+   	border: 0.10em solid var(--border-color-p-Encapsulated); /*Dimgrey*/
    	margin-left: 6.25em;
 } 
 th, td, tr, table {
 
 	border: 0.10em;
-	border-color: #808080; 
+	border-color: var(--border-color-th_td_tr_table);
 	border-style: solid;
 	border-collapse: collapse;  /*Had to make the table an Inline-table element to give it an horizontal scrollbar, now there are 2 outer borders, doesn't look bad tho*/
 	text-align: justify; 
@@ -115,10 +188,10 @@ th, td, tr {
 	}
 }
 header {  
-	background-color: #696969; /*Dimgrey*/
+	background-color: var(--bg-color-header_footer);
 	margin-top: -0.85em;
 	padding: 0.85em;
-	color: #000; /*Black*/
+	color: var(--text-color-header_footer);
 }
 .bold {
 	font-weight: bold;		
@@ -133,7 +206,7 @@ article > h3 {
 hr.Bsections { 
 	margin-bottom: 0px;
 	margin-top: 0px; /*To aligh it with Header*/
-	background-color: #404040;
+	background-color: var(--bg-color-hr-Bsections);
 	padding: 0.20em;
 	border-top: 0px;
 	opacity: 1;
@@ -141,30 +214,30 @@ hr.Bsections {
 footer { 
 	margin-top: 0px; /*To align it with hr*/
 	padding: 1.10em;
-	background-color: #696969; /*Dimgrey*/
-	color: #000; /*Black*/
+	background-color: var(--bg-color-header_footer); 
+	color: var(--text-color-header_footer); 
 }
 span.highlight {
 	text-decoration: underline;
-	text-decoration-color: #8b0000; /*Dark red*/
+	text-decoration-color: var(--textdecoration-color-span-highlight);
 	text-decoration-thickness: 0.15em;
 	font-weight: bold;
 }
 select {
-	background: #a9a9a9; /*Darkgrey*/
+	background: var(--bg-color-a-link-visited_select);
 }
 ul li {
 	list-style: none;
 }
 ul li::before {
-	content: "•"; color: #fff; /*White*/
+	content: "•"; color: var(--content-color-ul-li-before);
 	display: inline-block;
 	width: 1em;
 	margin: 0.10em 0px 0px -1em; /*Cada numero modifica cada lado en este orden Top-Right-Down-Left*/
 }
 ul li:nth-child(3):hover { /*Esta linea especifica que se le aplique el Style al 3er div que se encuentre dentro de un elemento section y que tenga el mouse encima, la propiedad de nth-child tambien puede ser Odd or Even*/
-	background-color: #fff; /*White*/
-	color: #000;	/*Black*/
+	background-color: var(--bg-color-ul-li-nth-child-3-hover);
+	color: var(--text-color-ul-li-nth-child-3-hover);
 } 
 
 
