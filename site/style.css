@@ -78,6 +78,11 @@ th, td, tr {
 		width: 100%;
 		margin-bottom: 0.2em;
 	}
+	a.SmallerA {
+		width: 100%; /*En relacion al tamano de su contenedor*/
+		display: inline-block!important; /*Quiza puedo modificar el css para no necesitar este important aqui*/
+		margin: 0px;
+	}
 	p.Encapsulated {
 		margin: 0em;
 	}
@@ -95,11 +100,16 @@ th, td, tr {
 		width: 100%;
 		margin-bottom: 0.2em;
 	}
+	a.SmallerA {
+		width: 100%; /*En relacion al tamano de su contenedor*/
+		display: inline-block!important; /*Quiza puedo modificar el css para no necesitar este important aqui*/
+		margin: 0px;
+	}
 	p.Encapsulated {
 		margin: 0em;
 	}
 	table {
-		display: flex;
+		display: flex; /*Dont know why this works, it does tho*/
 		overflow: hidden; /*To make sure the content doesnt spill out and widends the page*/
 		overflow-x: scroll;
 	}
@@ -120,7 +130,7 @@ section {
 article > h3 {
 	font-size: 1.64em;
 }
-hr { 
+hr.Bsections { 
 	margin-bottom: 0px;
 	margin-top: 0px; /*To aligh it with Header*/
 	background-color: #404040;
