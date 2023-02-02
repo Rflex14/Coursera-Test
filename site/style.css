@@ -1,43 +1,4 @@
 
-h1._brand_ {
-	text-shadow: 1px 1px 2px var(--text-shadow-color-h1);
-}
-h2.h2postheader {
-	margin-top: 0.20em;
-	font-size: 1.53em;
-}
-a.button:link, a.button:visited {
-	text-decoration: none;
-	background-color: var(--bg-color-a-link-visited_select); /*Darkgrey*/
-	border: 0.05em solid var(--border-color-a-link-visited); /*Black*/
-	color: var(--text-color-a-link-visited); /*Este es un numero hexadecimal (En este caso simplificado), es la forma correcta de especificar el color, los 2 primeros numeros son rojo, los 2 siguientes verde y los 2 ultimos azul, ff es el valor mas alto de azul*/ 
-	display: inline;
-	text-align: center;
-	padding-top: 0.05em;
-	margin-top: 0.05em;
-}
-a:hover, a:active { /*These are Pseudo classes*/
-	background-color: var(--bg-color-a-hover-active)!important; /*need to figure out why !important is needed and if possible, not use it*/
-}
-/*Buttons to ugly, mobile ones kinda ok*/
-button.theme-btn-dark {
-	background-color: var(--theme-btn-dark);
-	border: 1px solid var(--bg-color-body);
-	color: var(--text-color-a-link-visited);
-}
-button.theme-btn-light {
-	background-color: var(--theme-btn-light);
-	border: 1px solid var(--bg-color-body);
-	color: var(--text-color-a-link-visited);
-}
-button.theme-darkbtn-pressed {
-	background-color: var(--theme-darkbtn-pressed);
-
-}
-button.theme-lightbtn-pressed {
-	background-color: var(--theme-lightbtn-pressed);
-
-}
 :root, 
 	:root.dark {
 		 	--bg-color-body: #000; /*Black*/
@@ -64,32 +25,100 @@ button.theme-lightbtn-pressed {
  			--theme-lightbtn-pressed: ;
 
 
+ 			/*There must be a better way to 'disable' buttons when pressed*/
+
+ 			
+ 			--theme-darkbtn-cursor: default;
+ 			--theme-lightbtn-cursor: pointer;
+ 			/*I feel like the more of these I introduce the deeper I trap myself*/
+ 			--theme-btn-hover: #707070;
+
 	}
 	:root.light {
-			--bg-color-body: #fff;
+			--bg-color-body: rgba(120,120,120,.1);
 			--text-color-body: #000;
 
 			/*Changeable ones:*/
-			--bg-color-hr-Bsections: #404040; 
-			--bg-color-a-hover-active: #808080;
-			--bg-color-a-link-visited_select: #a9a9a9;
-			--border-color-a-link-visited: #fff;
+			--bg-color-hr-Bsections: #000; 
+			--bg-color-a-hover-active: #2ff; /*Light blue*/
+			--bg-color-a-link-visited_select: #55c2da;
+			--border-color-a-link-visited: #000;
 			--text-color-a-link-visited: #00f;
 			--text-shadow-color-h1:	#101010;
- 			--bg-color-header_footer: #696969; /*Dimgrey*/
- 			--text-color-header_footer: #fff;
- 			--border-color-p-Encapsulated: #696969;
- 			--textdecoration-color-span-highlight: #8b0000; /*dark red*/
- 			--border-color-th_td_tr_table: #808080;
+ 			--bg-color-header_footer: rgba(120,120,120,.3);
+ 			--text-color-header_footer: #000;
+ 			--border-color-p-Encapsulated: #000;
+ 			--textdecoration-color-span-highlight: #ff0000; /*dark red*/
+ 			--border-color-th_td_tr_table: #000;
 
  			--content-color-ul-li-before: #000;
  			--bg-color-ul-li-nth-child-3-hover: #000;
  			--text-color-ul-li-nth-child-3-hover: #fff;
 
- 			--theme-btn-dark: #a9a9a9;
- 			--theme-btn-light: #707070;
+ 			--theme-btn-dark: #55c2da;
+ 			--theme-btn-light: #4681f4;
  			--theme-darkbtn-pressed: ;
- 			--theme-lightbtn-pressed: rgba(255,255,255,.3);
+ 			--theme-lightbtn-pressed: #4681f4;
+
+
+ 			/*There must be a better way to 'disable' buttons when pressed*/
+
+
+ 			--theme-darkbtn-cursor: pointer;
+ 			--theme-lightbtn-cursor: default;
+
+ 			--theme-btn-hover: #4681f4;
+	}
+
+
+h1._brand_ {
+	text-shadow: 1px 1px 2px var(--text-shadow-color-h1);
+}
+h2.h2postheader {
+	margin-top: 0.20em;
+	font-size: 1.53em;
+}
+a.button:link, a.button:visited {
+	text-decoration: none;
+	background-color: var(--bg-color-a-link-visited_select); /*Darkgrey*/
+	border: 0.05em solid var(--border-color-a-link-visited); /*Black*/
+	color: var(--text-color-a-link-visited); /*Este es un numero hexadecimal (En este caso simplificado), es la forma correcta de especificar el color, los 2 primeros numeros son rojo, los 2 siguientes verde y los 2 ultimos azul, ff es el valor mas alto de azul*/ 
+	display: inline;
+	text-align: center;
+	padding-top: 0.05em;
+	margin-top: 0.05em;
+}
+a:hover, a:active { /*These are Pseudo classes*/
+	background-color: var(--bg-color-a-hover-active)!important; /*need to figure out why !important is needed and if possible, not use it*/
+}
+
+
+/*Buttons to ugly, mobile ones kinda ok*/
+	button.theme-btn-dark {
+		background-color: var(--theme-btn-dark);
+		border: 1px solid #000;
+		color: var(--text-color-a-link-visited);
+		cursor: var(--theme-darkbtn-cursor);
+	}
+	button.theme-btn-dark:hover {
+		background-color: var(--theme-btn-hover);
+	}
+	button.theme-darkbtn-pressed {
+		background-color: var(--theme-darkbtn-pressed);
+	}
+
+
+	button.theme-btn-light {
+		background-color: var(--theme-btn-light);
+		border: 1px solid #000;
+		color: var(--text-color-a-link-visited);
+		cursor: var(--theme-lightbtn-cursor);
+	}
+	button.theme-btn-light:hover {
+		background-color: var(--theme-btn-hover);
+	}
+	button.theme-lightbtn-pressed {
+		background-color: var(--theme-lightbtn-pressed);
 	}
 
 body { 
@@ -99,6 +128,7 @@ body {
    	font-family: 'Oxygen', sans-serif;
    	font-style: normal;
   	text-align: justify;
+  	overflow-x: hidden;
 }
 p.Encapsulated { 
    	padding: 0.85em;
